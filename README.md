@@ -14,8 +14,9 @@ The SonarQube Server is community version (25.9.0), so we need branch plugin to 
 - Make sure docker is running
 - Run `make build`
 - Login to the sonarqube dashboard using admin creds, it should ask you to change the default passsword
-- Generate sonar token on administration page
-- Run `SONAR_TOKEN=squxxxx make scan-js`
+- Run `cp .env.example .env`
+- Generate sonar token on administration page, change the sonar token in the .env file
+- Run `make scan-js`
 
 # SonarQube Result
 Go to http://localhost:9000, you should see the project sample-js on the dashboard
