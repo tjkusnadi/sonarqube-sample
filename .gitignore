@@ -11,3 +11,5 @@ __pycache__
 .coveragerc
 coverage.xml
 htmlcov
+
+coverage.out

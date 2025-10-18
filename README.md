@@ -24,6 +24,8 @@ The SonarQube Server is community version (25.9.0), so we need branch plugin to 
     - `coverage run -m pytest`
     - `coverage report -m`
     - `coverage xml`
+- For go we are using built-in go library, `go test`
+    - `go test ./src/... -coverprofile=coverage.out`
 
 # SonarQube Result
 Go to http://localhost:9000, you should see the project sample-js on the dashboard
