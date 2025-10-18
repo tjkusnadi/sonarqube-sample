@@ -1,7 +1,7 @@
 -include .env
 export $(shell sed 's/=.*//' .env)
 
-PHONY: build
+PHONY: build scan-js scan-python
 
 build:
 	docker-compose build --no-cache \
@@ -10,3 +10,6 @@ build:
 
 scan-js:
 	cd sample-js && sonar-scanner -Dsonar.token=$(SONAR_TOKEN)
+
+scan-python:
+	cd sample-python && sonar-scanner -X -Dsonar.token=$(SONAR_TOKEN)

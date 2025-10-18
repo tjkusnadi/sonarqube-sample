@@ -1,4 +1,13 @@
 .scannerwork
 .env
+
 node_modules
 coverage
+
+.venv
+.pytest_cache
+__pycache__
+.coverage
+.coveragerc
+coverage.xml
+htmlcov
