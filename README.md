@@ -8,6 +8,8 @@ The SonarQube Server is community version (25.9.0), so we need branch plugin to 
 - [Docker](https://www.docker.com/products/docker-desktop/)
 - [Sonar Scanner Cli](https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/sonarscanner)
 - [NodeJS](https://nodejs.org/en)
+- [Python](https://www.python.org/downloads/)
+- [Go](https://go.dev/dl/)
 
 ## How to
 - Clone the repository
@@ -16,9 +18,14 @@ The SonarQube Server is community version (25.9.0), so we need branch plugin to 
 - Login to the sonarqube dashboard using admin creds, it should ask you to change the default passsword
 - Run `cp .env.example .env`
 - Generate sonar token on administration page, change the sonar token in the .env file
-- Run `make scan-js`
 
-## Collecting the coverage
+## Collecting the coverage & scan to sonar
+- Run `make test-js scan-js` for javascript sample
+- Run `make test-python scan-python` for python sample
+- Run `make test-go scan-go` for go sample
+- Run `make all` to do all at one
+
+## Coverage command
 - For javascript, straightforward running the test using jest, `npm run test:coverage`
 - For python, using pytest & coverage
     - `coverage run -m pytest`
