@@ -19,7 +19,7 @@ PHONY += test-js scan-js
 test-python:
 	cd sample-python && \
 	python3 -m venv .venv && \
-	source .venv/bin/activate && \
+	. .venv/bin/activate && \
 	pip install -r requirements.txt && \
 	coverage run -m pytest && \
 	coverage report -m && \
